@@ -30,16 +30,14 @@ const generatePassword = () => {
 passwordItem.fill();
 console.log(passwordItem);
 
-//Prompts 
-// #character 8-128
+//characterCount
 let characterCount = prompt("How many characters would you like between 8 and 128?");
+
 if (characterCount < 8) {
   let characterCount = prompt("Must be greater than 8 and less than 128.");
 }else if (characterCount > 128) {
   let characterCount = prompt("Must be greater than 8 and less than 128.");
 }
-
-// checkCharacterCount();
 
 console.log(characterCount);
 // isLowercase
@@ -54,9 +52,6 @@ console.log(isNumeric);
 //isSpecial
 let isSpecial = confirm("Would you like special characters?");
 console.log(isSpecial);
-
-
-//generate password matching criteria  lowercase done
 
 // isLowercase 
 if (isLowercase && !isUppercase && !isNumeric && !isSpecial){
@@ -251,19 +246,4 @@ return passwordItemString;
 }else {
   return ("Must select at least one criteria.")
 }
-
-//else (none)
-
-
-
-//display password on alert or on page
-
-}
-
-function checkCharacterCount () {
-  if (characterCount < 8) {
-    let characterCount = prompt("Must be greater than 8 and less than 128.");
-  }else if (characterCount > 128) {
-    let characterCount = prompt("Must be greater than 8 and less than 128.");
-  }
 }
