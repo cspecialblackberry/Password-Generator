@@ -23,12 +23,12 @@ const numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 //special
 const special = ['"', "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", ">", "?", "@", "[", "]", "^", "_", "`", "{", "}", "|", "~"]
 
-let lowercaseItem = lowercase[Math.floor(Math.random()*lowercase.length)];
-console.log(lowercaseItem);
-
 const passwordItem = [];
 
 const generatePassword = () => {
+
+passwordItem.fill();
+console.log(passwordItem);
 
 //Prompts 
 // #character 8-128
