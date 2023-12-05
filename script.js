@@ -71,8 +71,10 @@ return passwordItemString;
 // isLowercase and isUppercase
 }else if (isLowercase && isUppercase && !isNumeric && !isSpecial){
 console.log("LU");
+passwordItem[0] = lowercase[Math.floor(Math.random()*lowercase.length)];
+passwordItem[1] = uppercase[Math.floor(Math.random()*uppercase.length)];
 const lowercaseUppercase =[...lowercase, ...uppercase];
-for(i=0; i<characterCount; i++) {
+for(i=2; i<characterCount; i++) {
   passwordItem[i] = lowercaseUppercase[Math.floor(Math.random()*lowercaseUppercase.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -82,8 +84,10 @@ return passwordItemString;
 //isLowercase and isNumeric
 }else if (isLowercase && !isUppercase && isNumeric && !isSpecial){
 console.log("LN");
+passwordItem[0] = lowercase[Math.floor(Math.random()*lowercase.length)];
+passwordItem[1] = numeric[Math.floor(Math.random()*numeric.length)];
 const lowercaseNumeric = [...lowercase, ...numeric];
-for(i=0; i<characterCount; i++) {
+for(i=2; i<characterCount; i++) {
   passwordItem[i] = lowercaseNumeric[Math.floor(Math.random()*lowercaseNumeric.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -93,8 +97,10 @@ return passwordItemString;
 //isLowercase and isSpecial
 }else if (isLowercase && !isUppercase && !isNumeric && isSpecial){
 console.log("LS");
+passwordItem[0] = lowercase[Math.floor(Math.random()*lowercase.length)];
+passwordItem[1] = special[Math.floor(Math.random()*numeric.length)];
 const lowercaseSpecial = [...lowercase, ...special];
-for(i=0; i<characterCount; i++) {
+for(i=2; i<characterCount; i++) {
   passwordItem[i] = lowercaseSpecial[Math.floor(Math.random()*lowercaseSpecial.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -104,8 +110,11 @@ return passwordItemString;
 //isLowercase and isUppercase and isNumeric
 }else if (isLowercase && isUppercase && isNumeric && !isSpecial){
 console.log("LUN");
+passwordItem[0] = lowercase[Math.floor(Math.random()*lowercase.length)];
+passwordItem[1] = uppercase[Math.floor(Math.random()*uppercase.length)];
+passwordItem[2] = numeric[Math.floor(Math.random()*numeric.length)];
 const lowercaseUppercaseNumeric = [...lowercase, ...uppercase, ...numeric];
-for(i=0; i<characterCount; i++) {
+for(i=3; i<characterCount; i++) {
   passwordItem[i] = lowercaseUppercaseNumeric[Math.floor(Math.random()*lowercaseUppercaseNumeric.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -115,8 +124,11 @@ return passwordItemString;
 //isLowercase and isUppercase and isSpecial
 }else if (isLowercase && isUppercase && !isNumeric && isSpecial){
 console.log("LUS");
+passwordItem[0] = lowercase[Math.floor(Math.random()*lowercase.length)];
+passwordItem[1] = uppercase[Math.floor(Math.random()*uppercase.length)];
+passwordItem[2] = special[Math.floor(Math.random()*numeric.length)];
 const lowercaseUppercaseSpecial = [...lowercase, ...uppercase, ...special];
-for(i=0;i<characterCount;i++){
+for(i=3;i<characterCount;i++){
   passwordItem[i] = lowercaseUppercaseSpecial[Math.floor(Math.random()*lowercaseUppercaseSpecial.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -126,8 +138,11 @@ return passwordItemString;
 //isLowercase and isNumeric and isSpecial
 }else if (isLowercase && !isUppercase && isNumeric && isSpecial){
 console.log("LNS");
+passwordItem[0] = lowercase[Math.floor(Math.random()*lowercase.length)];
+passwordItem[1] = numeric[Math.floor(Math.random()*numeric.length)];
+passwordItem[2] = special[Math.floor(Math.random()*numeric.length)];
 const lowercaseNumericSpecial = [...lowercase, ...numeric, ...special];
-for(i=0;i<characterCount;i++){
+for(i=3;i<characterCount;i++){
   passwordItem[i] = lowercaseNumericSpecial[Math.floor(Math.random()*lowercaseNumericSpecial.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -163,8 +178,10 @@ return passwordItemString;
 //isUppercase and isNumeric
 }else if (!isLowercase && isUppercase && isNumeric && !isSpecial){
 console.log("UN");
+passwordItem[0] = uppercase[Math.floor(Math.random()*uppercase.length)];
+passwordItem[1] = numeric[Math.floor(Math.random()*numeric.length)];
 const uppercaseNumeric = [...uppercase, ...numeric];
-for(i=0;i<characterCount;i++){
+for(i=2;i<characterCount;i++){
   passwordItem[i] = uppercaseNumeric[Math.floor(Math.random()*uppercaseNumeric.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -174,8 +191,10 @@ return passwordItemString;
 //isUppercase and isSpecial
 }else if (!isLowercase && isUppercase && !isNumeric && isSpecial){
 console.log("US");
+passwordItem[0] = uppercase[Math.floor(Math.random()*uppercase.length)];
+passwordItem[1] = special[Math.floor(Math.random()*numeric.length)];
 const uppercaseSpecial = [...uppercase, ...special];
-for(i=0;i<characterCount;i++){
+for(i=2;i<characterCount;i++){
   passwordItem[i] = uppercaseSpecial[Math.floor(Math.random()*uppercaseSpecial.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -185,8 +204,11 @@ return passwordItemString;
 //isUppercase and isSpecial and isNumeric
 }else if (!isLowercase && isUppercase && isNumeric && isSpecial){
 console.log("USN");
+passwordItem[0] = uppercase[Math.floor(Math.random()*uppercase.length)];
+passwordItem[1] = special[Math.floor(Math.random()*numeric.length)];
+passwordItem[2] = numeric[Math.floor(Math.random()*numeric.length)];
 const uppercaseSpecialNumeric = [...uppercase, ...special, ...numeric];
-for(i=0;i<characterCount;i++){
+for(i=3;i<characterCount;i++){
   passwordItem[i] = uppercaseSpecialNumeric[Math.floor(Math.random()*uppercaseSpecialNumeric.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
@@ -206,8 +228,10 @@ return passwordItemString;
 //isSpecial and isNumeric
 }else if (!isLowercase && !isUppercase && isNumeric && isSpecial){
 console.log("SN");
+passwordItem[0] = special[Math.floor(Math.random()*numeric.length)];
+passwordItem[1] = numeric[Math.floor(Math.random()*numeric.length)];
 const specialNumeric = [...special, ...numeric];
-for(i=0;i<characterCount;i++){
+for(i=2;i<characterCount;i++){
   passwordItem[i] = specialNumeric[Math.floor(Math.random()*specialNumeric.length)];
   console.log(passwordItem[i]);
   var passwordItemString = passwordItem.join("");
