@@ -33,10 +33,14 @@ console.log(passwordItem);
 //characterCount
 var characterCount = prompt("How many characters would you like between 8 and 128?");
 
-if (characterCount < 8) {
-  var characterCount = prompt("Must be greater than 8 and less than 128.");
-}else if (characterCount > 128) {
-  var characterCount = prompt("Must be greater than 8 and less than 128.");
+//enforce 8-128 character limit
+for (i=0;i<1;i){
+  if (characterCount<8 || characterCount>128){
+    characterCount = prompt("Must be greater than 8 and less than 128.");
+    i = 0;
+  } else {
+    i=1;
+  }
 }
 
 console.log(characterCount);
