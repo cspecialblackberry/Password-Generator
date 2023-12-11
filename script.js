@@ -20,8 +20,11 @@ const numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 const special = ['"', "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", ">", "?", "@", "[", "]", "^", "_", "`", "{", "}", "|", "~"]
 let generatedPassword = []
 
+
+
 const generatePassword = () => {
 
+//reset array incase last run had longer character count
 generatedPassword.fill()
 
 var characterCount = prompt("How many characters would you like between 8 and 128?")
@@ -31,14 +34,9 @@ var characterCount = prompt("How many characters would you like between 8 and 12
     return "please try again"}
 
 let isLowercase = confirm("Would you like lowercase letters?")
-console.log(isLowercase)
 let isUppercase = confirm("Would you like uppercase letters?")
-console.log(isUppercase)
 let isNumeric = confirm("Would you like numbers?")
-console.log(isNumeric)
 let isSpecial = confirm("Would you like special characters?")
-console.log(isSpecial)
-
 let passwordItem = []
 
 if (isLowercase) {
@@ -60,9 +58,9 @@ if(passwordItem.length===0){
 
 for(var i=0; i<characterCount; i++) {
   generatedPassword[i]= passwordItem[Math.floor(Math.random()*passwordItem.length)]
-  // generatedPassword[i]= passwordItem[index]
 }
 
+//force to include at least one of each selected criteria
 let newString =""
 if (isLowercase){
   generatedPassword[0]= lowercase[Math.floor(Math.random()*lowercase.length)]
@@ -80,6 +78,8 @@ let generatedPasswordString = generatedPassword.join("")
 return generatedPasswordString
 }
 
+
+//copy to clipboard function
 const copyPassword = (event) => {
   event.preventDefault();
   let generatedPasswordString = generatedPassword.join("")
