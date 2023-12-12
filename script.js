@@ -37,6 +37,7 @@ let isLowercase = confirm("Would you like lowercase letters?")
 let isUppercase = confirm("Would you like uppercase letters?")
 let isNumeric = confirm("Would you like numbers?")
 let isSpecial = confirm("Would you like special characters?")
+//generate array outside of function so both functions can use
 let passwordItem = []
 
 if (isLowercase) {
